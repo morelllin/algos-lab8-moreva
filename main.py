@@ -68,7 +68,9 @@ poll_results = ["Python", "Java", "Javascript", "Python", "Javascript", "Python"
 ```  
 Используя словарь, подсчитайте количество голосов за каждый язык.  
 
----
+poll_results = ["Python", "Java", "Javascript", "Python", "Javascript", "Python", "C", "Python", "Python", "C", "Javascript"]
+
+language_voice 
 
 ### Задача 7: Подсчёт очков  
 Три друга играют в игру, где каждый игрок зарабатывает очки в трёх раундах. Их результаты:  
