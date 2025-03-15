@@ -36,7 +36,10 @@ tina_friends = ["Tim", "Susan", "Mary", "Josh"]
 ```  
 Объедините оба списка в один, исключив дублирующиеся имена.  
 
----
+paul_friends = ["Mary", "Tim", "Mike", "Henry"]  
+tina_friends = ["Tim", "Susan", "Mary", "Josh"]
+all_friends = list(set(paul_friends + tina_friends))
+print(all_friends)
 
 ### Задача 4: Общие друзья  
 Используя те же списки друзей Пола и Тины, напишите программу, которая с помощью цикла находит их общих друзей.  
