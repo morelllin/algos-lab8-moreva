@@ -55,7 +55,11 @@ basketball_players = {"Eve", "Richard", "Jessica", "Sam", "Michael"}
 ```  
 Напишите программу, которая определяет игроков, зарегистрированных только в баскетболе (не в футболе и не в волейболе).  
 
----
+football_players = {"Eve", "Tom", "Richard", "Peter"}  
+volleyball_players = {"Jack", "Hugh", "Peter", "Sam"}  
+basketball_players = {"Eve", "Richard", "Jessica", "Sam", "Michael"}
+only_basketball = basketball_players - football_players - volleyball_players
+print("Игроки, зарегистрированные только в баскетболе:", only_basketball)
 
 ### Задача 6: Подсчёт голосов  
 Результаты опроса о любимом языке программирования:  
