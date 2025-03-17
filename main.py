@@ -84,11 +84,20 @@ for option, count in voice_count.items():
 ### Задача 7: Подсчёт очков  
 Три друга играют в игру, где каждый игрок зарабатывает очки в трёх раундах. Их результаты:  
 ```python
-scores = [('Mike', 10), ('Mike', 8), ('Mike', 6), ('John', 7), ('John', 8), ('John', 5), ('Tom', 8), ('Tom', 9), ('Tom', 8)]
+
 ```  
 Создайте словарь, где ключами будут имена игроков, а значениями — их суммарные очки.  
 
----
+scores = [('Mike', 10), ('Mike', 8), ('Mike', 6), ('John', 7), ('John', 8), ('John', 5), ('Tom', 8), ('Tom', 9), ('Tom', 8)]
+
+summ_scores = {}
+
+for name, score in scores: 
+    if name in summ_scores: 
+        summ_scores[name] += score
+    else: summ_scores[name] = score
+
+print(summ_scores)    
 
 ### Задача 8: Статистика списка  
 Дан список чисел:  
