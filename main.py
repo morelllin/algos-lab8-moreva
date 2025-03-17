@@ -132,7 +132,20 @@ word_list = ["apple", "airplane", "carrot", "elephant", "guitar", "moonlight"]
 ```  
 Напишите программу, которая определяет самое длинное и самое короткое слово в списке.  
 
+def long_and_short(words): 
+    if not words: 
+        return None, None
+    
+    longest_word = max(words, key=len)
+    shortest_word = min(words, key=len)
+    return longest_word, shortest_word
+    
+word_list = ["apple", "airplane", "carrot", "elephant", "guitar", "moonlight"]
 
+longest_word, shortest_word = long_and_short(word_list)
+
+print(f"Самое длинное слово: {longest_word}")
+print(f"Самое короткое слово: {shortest_word}")
 
 ### Задача 10: Фильтрация по частоте  
 Дан список чисел:  
@@ -141,7 +154,15 @@ number_list = [5, 8, 2, 7, 3, 5, 6, 9, 2, 4, 8, 7, 1, 5, 3]
 ```  
 Создайте новый список, содержащий только числа, которые встречаются в оригинальном списке не менее трёх раз.  
 
----
+from collections import Counter
+
+number_list = [5, 8, 2, 7, 3, 5, 6, 9, 2, 4, 8, 7, 1, 5, 3]
+
+frequency = Counter(number_list)
+filter_list = [num for num in frequency 
+               if frequency[num] >= 3]
+
+print(f"Числа, которые встречаются не менее трех раз: {filter_list}")
 
 ### Задача 11: Второй лучший результат  
 Дан список результатов экзамена:  
@@ -150,5 +171,18 @@ exam_results = [23, 78, 96, 32, 53, 67, 23, 98, 33, 38, 45, 39, 86, 12, 43, 45]
 ```  
 Напишите программу, которая определяет второй по величине результат в списке.  
 
---- 
+exam_results = [23, 78, 96, 32, 53, 67, 23, 98, 33, 38, 45, 39, 86, 12, 43, 45]
+
+unique_results = set(exam_results)
+
+sorted_results = sorted(unique_results)
+
+if len(sorted_results) >= 2: 
+    second_best_result = sorted_results[-2]
+
+    print("Второй по величине результат:", second_best_result)    
+
+else: 
+
+    print("Недостаточно уникальных результатов для определения второго по величине результата")
 """
