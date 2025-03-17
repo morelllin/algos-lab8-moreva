@@ -70,7 +70,16 @@ poll_results = ["Python", "Java", "Javascript", "Python", "Javascript", "Python"
 
 poll_results = ["Python", "Java", "Javascript", "Python", "Javascript", "Python", "C", "Python", "Python", "C", "Javascript"]
 
-language_voice 
+voice_count = {}
+
+for results in poll_results:
+    if results in voice_count: 
+        voice_count[results] += 1
+    else: 
+        voice_count[results] = 1
+
+for option, count in voice_count.items():
+    print(f"{option}: {count} голосов") 
 
 ### Задача 7: Подсчёт очков  
 Три друга играют в игру, где каждый игрок зарабатывает очки в трёх раундах. Их результаты:  
