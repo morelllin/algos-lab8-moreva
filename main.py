@@ -106,7 +106,24 @@ numbers = [10, 3, 5, 9, 18, 3, 0, 7]
 ```  
 Напишите функцию, которая возвращает максимальное значение, сумму и среднее арифметическое чисел в списке.  
 
----
+def statistic(numbers):
+    if not numbers: 
+        return max_value, total_sum, average
+
+    numbers = [10, 3, 5, 9, 18, 3, 0, 7]
+
+    max_value = max(numbers)
+    total_sum = sum(numbers)
+    average = total_sum / len(numbers)
+
+    return max_value, total_sum, average 
+
+numbers = [10, 3, 5, 9, 18, 3, 0, 7]
+max_value, total_sum, average = statistic(numbers)
+
+print(f"Максимальное значение: {max_value}")
+print(f"Сумма: {total_sum}")
+print(f"Среднее арифметическое чисел: {average}")
 
 ### Задача 9: Длинные и короткие слова  
 Дан список слов:  
@@ -115,7 +132,7 @@ word_list = ["apple", "airplane", "carrot", "elephant", "guitar", "moonlight"]
 ```  
 Напишите программу, которая определяет самое длинное и самое короткое слово в списке.  
 
----
+
 
 ### Задача 10: Фильтрация по частоте  
 Дан список чисел:  
